@@ -1,0 +1,72 @@
+body
+{
+   font-family: 'Lato', sans-serif !important;
+   background-image: url(background@2x.png);
+   width: 1920px;
+   height: 1080px;
+   margin: 0 auto;
+}
+header
+{
+   background-color: white;
+   width: 1920px;
+   height: 125px;
+   margin: 0 auto;
+}
+#logo
+{
+   width: 125px;
+   height: 125px;
+   float: left;
+}
+header h1
+{
+   color: black;
+   float:left;
+   font-size: 35px;
+   color: #514F54;
+}
+.sekcja_glowna
+{
+   width: 1920px;
+   height: 955px;
+}
+#wybierz_opcje
+{
+   font-size: 25px;
+   color: white;
+   text-align: center;
+}
+.opcja
+{
+   width: 812px;
+   height: 60px;
+   border-radius: 30px;
+   background-color: white;
+   color: #514F54;
+   margin-bottom: 30px;
+   text-align: center;
+   font-size: 25px;
+}
+.opcja:hover
+{
+   background-color: #5AB7FF
+}
+.flex-parent
+{
+   display: flex;
+}
+.jc-center
+{
+   justify-content: center;
+}
+hr
+{
+   width: 1800px;
+}
+#footer
+{
+   text-align: center;
+   color:white;
+   font-size: 25px;
+}
