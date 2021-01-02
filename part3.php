@@ -21,7 +21,7 @@
     <!-- Przypisanie zmiennej z poprzedniego etapu -->
     <?php
       session_start();
-      $_SESSION['department'] = $_POST['form_department'];
+      $_SESSION['picked_date'] = $_POST['choose_date'];
     ?>
 
     <body>
@@ -56,13 +56,24 @@
       <div class="sekcja_glowna">
         <div class="container">
           <div class="row">
-            <p id="wybierz_opcje">Wpisz swój termin</p>
+            <p id="wybierz_opcje">Wpisz swoje dane</p>
 
-            <form method="post" class="formularz" action="part3.php">
+            <form method="post" class="formularz" action="part4.php">
+
+              <p id="font25">Imie</p>
               <div class="flex-parent jc-center">
-                <input type="date" name="choose_date" class="option">
+                <input type="text" class="option" name="personal_name" placeholder="tutaj wpisz imie">
+              </div>
+              <p id="font25">Nazwisko</p>
+              <div class="flex-parent jc-center">
+                <input type="text" class="option" name="personal_surname" placeholder="tutaj wpisz naziwsko">
+              </div>
+              <p id="font25">Email</p>
+              <div class="flex-parent jc-center">
+                <input type="text" class="option" name="personal_email" placeholder="tutaj wpisz email">
               </div>
               <input type="submit" name="next" value=">" id="submit_button">
+
             </form>
 
           </div>

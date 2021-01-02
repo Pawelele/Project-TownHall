@@ -58,13 +58,18 @@
           <div class="row">
             <p id="wybierz_opcje">Wpisz swój termin</p>
 
-            <form method="post" class="formularz" action="part3.php">
-              <div class="flex-parent jc-center">
-                <input type="date" name="choose_date" class="option">
-              </div>
-              <input type="submit" name="next" value=">" id="submit_button">
+            <form action="post" class="formularz" action="sekcja3.php">
+
             </form>
 
+            <!-- <div class="flex-parent jc-center">
+            <button class="opcja">Rejestracja pojazdu, pozostałe sprawy</button></div>
+            <div class="flex-parent jc-center">
+            <button class="opcja">Zgłoszenie zbycia, odbiór stałego dowodu rej.</button></div>
+            <div class="flex-parent jc-center">
+            <button class="opcja">Prawo jazdy-odbiór dokumentu (po wymianie lub po egzaminie)</button></div>
+            <div class="flex-parent jc-center">
+            <button class="opcja">Prawo jazdy-złożenie wniosku, PKK oraz pozostałe sprawy</button></div> -->
           </div>
         </div>
       </div>

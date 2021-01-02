@@ -21,7 +21,9 @@
     <!-- Przypisanie zmiennej z poprzedniego etapu -->
     <?php
       session_start();
-      $_SESSION['department'] = $_POST['form_department'];
+      $_SESSION['name'] = $_POST['personal_name'];
+      $_SESSION['surname'] = $_POST['personal_surname'];
+      $_SESSION['email'] = $_POST['personal_email'];
     ?>
 
     <body>
@@ -56,15 +58,19 @@
       <div class="sekcja_glowna">
         <div class="container">
           <div class="row">
-            <p id="wybierz_opcje">Wpisz swój termin</p>
-
-            <form method="post" class="formularz" action="part3.php">
+            <p id="wybierz_opcje">Dane rezerwacji</p>
               <div class="flex-parent jc-center">
-                <input type="date" name="choose_date" class="option">
+                <div class="option">Twoje imie: <a><?php echo $_SESSION['name']?></a></div>
               </div>
-              <input type="submit" name="next" value=">" id="submit_button">
-            </form>
-
+              <div class="flex-parent jc-center">
+                <div class="option">Twoje nazwisko: <a><?php echo $_SESSION['surname']?></a></div>
+              </div>
+              <div class="flex-parent jc-center">
+                <div class="option">Twój email: <a><?php echo $_SESSION['email']?></a></div>
+              </div>
+              <div class="flex-parent jc-center">
+                <div class="option">Twój termin: <a><?php echo $_SESSION['picked_date']?></a></div>
+              </div>
           </div>
         </div>
       </div>

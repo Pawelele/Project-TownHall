@@ -29,40 +29,49 @@
         radio3 = document.getElementById("option3");
         radio4 = document.getElementById("option4");
 
+
         if(radio1.checked == true)
         {
-        document.getElementById("checked1").style.backgroundColor = "#5AB7FF";
+          document.getElementById("checked1").style.backgroundColor = "#5AB7FF";
+          document.getElementById("checked1").style.transform = "scale(1.03,1.03)"
         }
         else
         {
           document.getElementById("checked1").style.backgroundColor = "#FFFFFF";
+          document.getElementById("checked1").style.transform = "scale(1,1)"
         }
 
         if(radio2.checked == true)
         {
-        document.getElementById("checked2").style.backgroundColor = "#5AB7FF";
+          document.getElementById("checked2").style.backgroundColor = "#5AB7FF";
+          document.getElementById("checked2").style.transform = "scale(1.03,1.03)"
         }
         else
         {
           document.getElementById("checked2").style.backgroundColor = "#FFFFFF";
+          document.getElementById("checked2").style.transform = "scale(1,1)"
         }
 
         if(radio3.checked == true)
         {
-        document.getElementById("checked3").style.backgroundColor = "#5AB7FF";
+          document.getElementById("checked3").style.backgroundColor = "#5AB7FF";
+          document.getElementById("checked3").style.transform = "scale(1.03,1.03)"
         }
         else
         {
           document.getElementById("checked3").style.backgroundColor = "#FFFFFF";
+          document.getElementById("checked3").style.transform = "scale(1,1)"
         }
 
         if(radio4.checked == true)
         {
-        document.getElementById("checked4").style.backgroundColor = "#5AB7FF";
+          document.getElementById("checked4").style.backgroundColor = "#5AB7FF";
+          document.getElementById("checked4").style.transform = "scale(1.03,1.03)"
         }
         else
         {
           document.getElementById("checked4").style.backgroundColor = "#FFFFFF";
+          document.getElementById("checked4").style.transform = "scale(1,1)"
         }
 
       }
@@ -103,30 +112,26 @@
 
             <form method="post" class="form" action="part2.php">
 
-              <label for="option1" id="checked1" class="option" onchange="RadioCheck()">Rejestracja pojazdu, pozostałe sprawy <input type="radio" id="option1" value="XD" name="form_department"></label>
+              <div class="flex-parent jc-center">
+                <label for="option1" id="checked1" class="option" onchange="RadioCheck()">Rejestracja pojazdu, pozostałe sprawy <input type="radio" id="option1" value="XD" name="form_department"></label>
+              </div>
 
+              <div class="flex-parent jc-center">
+                <label for="option2" id="checked2" class="option" onchange="RadioCheck()">Zgłoszenie zbycia, odbiór stałego dowodu rej. <input type="radio" id="option2" value="XD" name="form_department"></label>
+              </div>
 
-              <label for="option2" id="checked2" class="option" onchange="RadioCheck()">Rejestracja pojazdu, pozostałe sprawy <input type="radio" id="option2" value="XD" name="form_department"></label>
+              <div class="flex-parent jc-center">
+                <label for="option3" id="checked3" class="option" onchange="RadioCheck()">Prawo jazdy-odbiór dokumentów (po wymienie lub po egzaminie)<input type="radio" id="option3" value="XD" name="form_department"></label>
+              </div>
 
-
-              <label for="option3" id="checked3" class="option" onchange="RadioCheck()">Rejestracja pojazdu, pozostałe sprawy <input type="radio" id="option3" value="XD" name="form_department"></label>
-
-
-              <label for="option4" id="checked4" class="option" onchange="RadioCheck()">Rejestracja pojazdu, pozostałe sprawy <input type="radio" id="option4" value="XD" name="form_department"></label>
+              <div class="flex-parent jc-center">
+                <label for="option4" id="checked4" class="option" onchange="RadioCheck()">Prawo jazdy-złoenie wniosku, PKK oraz pozostałe sprawy <input type="radio" id="option4" value="XD" name="form_department"></label>
+              </div>
 
               <input type="submit" name="next" value=">" id="submit_button">
 
-
             </form>
 
-            <!-- <div class="flex-parent jc-center">
-            <button class="opcja">Rejestracja pojazdu, pozostałe sprawy</button></div>
-            <div class="flex-parent jc-center">
-            <button class="opcja">Zgłoszenie zbycia, odbiór stałego dowodu rej.</button></div>
-            <div class="flex-parent jc-center">
-            <button class="opcja">Prawo jazdy-odbiór dokumentu (po wymianie lub po egzaminie)</button></div>
-            <div class="flex-parent jc-center">
-            <button class="opcja">Prawo jazdy-złożenie wniosku, PKK oraz pozostałe sprawy</button></div> -->
           </div>
         </div>
       </div>

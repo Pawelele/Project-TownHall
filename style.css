@@ -55,16 +55,20 @@ header h1
 {
    width: 812px;
    height: 60px;
+   line-height: 60px;;
    border-radius: 30px;
    background-color: white;
    color: #514F54;
    margin-bottom: 30px;
    text-align: center;
    font-size: 25px;
+   font-weight: 400;
 }
+
 .option:hover
 {
-   background-color: #5AB7FF;
+   background-color: #5AB7FF !important;
+   transform: scale(1.01);
 }
 .flex-parent
 {
@@ -73,6 +77,11 @@ header h1
 .jc-center
 {
    justify-content: center;
+}
+#font25
+{
+   font-size: 25px;
+   color: white;
 }
 hr
 {
@@ -89,7 +98,7 @@ hr
 /* Widoczność zaznaczenia radio */
 #option1, #option2, #option3, #option4
 {
-   opacity: 1;
+   opacity: 0;
 }
 
 #submit_button
