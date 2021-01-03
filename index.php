@@ -80,7 +80,7 @@
       <header>
         <div class="container-fluid">
           <div class="row">
-            <img id="logo" src="logo@2x.png">
+            <a href=index.php><img id="logo" src="logo@2x.png"></a>
             <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
           </div>
         </div>

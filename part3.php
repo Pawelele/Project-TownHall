@@ -28,7 +28,7 @@
       <header>
         <div class="container-fluid">
           <div class="row">
-            <img id="logo" src="logo@2x.png">
+            <a href=index.php><img id="logo" src="logo@2x.png"></a>
             <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
           </div>
         </div>
@@ -60,15 +60,19 @@
 
             <form method="post" class="formularz" action="part4.php">
 
-              <p id="font25">Imie</p>
+              <!-- <p id="font25">Imie</p> -->
               <div class="flex-parent jc-center">
                 <input type="text" class="option" name="personal_name" placeholder="tutaj wpisz imie">
               </div>
-              <p id="font25">Nazwisko</p>
+              <!-- <p id="font25">Nazwisko</p> -->
               <div class="flex-parent jc-center">
                 <input type="text" class="option" name="personal_surname" placeholder="tutaj wpisz naziwsko">
               </div>
-              <p id="font25">Email</p>
+              <!-- <p id="font25">Pesel</p> -->
+              <div class="flex-parent jc-center">
+                <input type="text" class="option" name="personal_pesel" placeholder="tutaj wpisz PESEL" minlength="11" maxlength="11">
+              </div>
+              <!-- <p id="font25">Email</p> -->
               <div class="flex-parent jc-center">
                 <input type="text" class="option" name="personal_email" placeholder="tutaj wpisz email">
               </div>

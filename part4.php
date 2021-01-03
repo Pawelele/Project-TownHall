@@ -23,6 +23,7 @@
       session_start();
       $_SESSION['name'] = $_POST['personal_name'];
       $_SESSION['surname'] = $_POST['personal_surname'];
+      $_SESSION['pesel'] = $_POST['personal_pesel'];
       $_SESSION['email'] = $_POST['personal_email'];
     ?>
 
@@ -30,7 +31,7 @@
       <header>
         <div class="container-fluid">
           <div class="row">
-            <img id="logo" src="logo@2x.png">
+            <a href=index.php><img id="logo" src="logo@2x.png"></a>
             <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
           </div>
         </div>

@@ -33,14 +33,17 @@
       if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
       }
-      echo "Connected successfully";
+      // echo "Connected successfully";
 
-      $sql="INSERT INTO zapisy (operacja, termin, imie, nazwisko, email, potwierdzenie ,login) VALUES ('$_SESSION[department]','$_SESSION[picked_date]', '$_SESSION[name]', '$_SESSION[surname]', '$_SESSION[email]', false , 'Marcin (test)')";
+      $sql="INSERT INTO zapisy (operacja, termin, imie, nazwisko, email, potwierdzenie , pesel) VALUES ('$_SESSION[department]','$_SESSION[picked_date]', '$_SESSION[name]', '$_SESSION[surname]', '$_SESSION[email]', false , '$_SESSION[pesel]')";
 
-      if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-      } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+      // Odczyt id zapisanego własnie rekordu na potrzeby wyświetlenia numerka
+      $q = "SELECT id FROM zapisy where pesel = '$_SESSION[pesel]' ORDER BY id ASC LIMIT 1";
+
+      $result = mysqli_query($conn, $q) or die("Problemy z odczytem danych!");
+      while($row = mysqli_fetch_assoc($result))
+      {
+        $_SESSION['ticket'] = $row['id'];
       }
     ?>
 
@@ -48,7 +51,7 @@
       <header>
         <div class="container-fluid">
           <div class="row">
-            <img id="logo" src="logo@2x.png">
+            <a href=index.php><img id="logo" src="logo@2x.png"></a>
             <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
           </div>
         </div>
@@ -56,18 +59,25 @@
 
       <div class="sekcja_glowna">
         <div class="container">
-
           <div class="row">
 
+            <div id="accepted">
+              <?php
+                if ($conn->query($sql) === TRUE) {
+                  echo "Twoja rezerwacja została dodana";
+                } else {
+                  echo "Error: " . $sql . "<br>" . $conn->error;
+                }
+              ?>
+            </div>
 
-            <p id="accepted">Twoja rezerwacja została dodana</p>
-            <p id="number">Twój numerek: xxx</p>
+            <div id="number">
+                Twój numerek:
+                <?php
+                  echo $_SESSION['ticket'];
+                ?>
+            </div>
 
-
-
-            <?php
-
-            ?>
 
           </div>
         </div>
