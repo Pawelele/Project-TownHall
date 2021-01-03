@@ -21,6 +21,19 @@
     <!-- Przypisanie zmiennej z poprzedniego etapu -->
     <?php
       session_start();
+
+      $servername = "localhost";
+      $username = "site_agent";
+      $password = "Projekt_siz_132";
+
+      try {
+        $conn = new PDO("mysql:host=$servername;dbname=SIZ_Database", $username, $password);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected successfully";
+      } catch(PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+      }
     ?>
 
     <body>
@@ -41,14 +54,10 @@
 
 
 
-            <!-- <div class="flex-parent jc-center">
-            <button class="opcja">Rejestracja pojazdu, pozostałe sprawy</button></div>
-            <div class="flex-parent jc-center">
-            <button class="opcja">Zgłoszenie zbycia, odbiór stałego dowodu rej.</button></div>
-            <div class="flex-parent jc-center">
-            <button class="opcja">Prawo jazdy-odbiór dokumentu (po wymianie lub po egzaminie)</button></div>
-            <div class="flex-parent jc-center">
-            <button class="opcja">Prawo jazdy-złożenie wniosku, PKK oraz pozostałe sprawy</button></div> -->
+            <?php
+
+            ?>
+
           </div>
         </div>
       </div>
