@@ -21,7 +21,6 @@
     <!-- Przypisanie zmiennej z poprzedniego etapu -->
     <?php
       session_start();
-      $_SESSION['department'] = $_POST['form_department'];
     ?>
 
     <body>
@@ -34,33 +33,13 @@
         </div>
       </header>
 
-      <div class="sekcja1_all">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="round">1</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">2</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">3</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">4</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="sekcja_glowna">
         <div class="container">
           <div class="row">
-            <p id="wybierz_opcje">Wpisz swój termin</p>
+            <p id="accepted">Twoja rezerwacja została dodana</p>
+            <p id="number">Twój numerek: xxx</p>
 
-            <form action="post" class="formularz" action="sekcja3.php">
 
-            </form>
 
             <!-- <div class="flex-parent jc-center">
             <button class="opcja">Rejestracja pojazdu, pozostałe sprawy</button></div>

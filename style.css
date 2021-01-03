@@ -55,7 +55,7 @@ header h1
 {
    width: 812px;
    height: 60px;
-   line-height: 60px;;
+   line-height: 60px;
    border-radius: 30px;
    background-color: white;
    color: #514F54;
@@ -70,6 +70,89 @@ header h1
    background-color: #5AB7FF !important;
    transform: scale(1.01);
 }
+
+.sekcja_regulamin
+{
+   background-color: white;
+   height: 1068px;
+   text-align: center;
+}
+.sekcja_regulamin p
+{
+   font-size: 25px;
+   color: #514F54;
+   margin-top: 55px;
+}
+.regulamin
+{
+   width: 1088px;
+   height: 636px;
+   color: white;
+   background-color: #2886E0;
+   border-radius: 30px;
+   margin-top: 24px;
+   font-size: 25px;
+   font-weight: 300;
+   padding: 20px;
+   text-align: left;
+
+}
+hr
+{
+   width: 80%;
+}
+#footer
+{
+   text-align: center;
+   color:white;
+   font-size: 25px;
+}
+#footer_part4
+{
+   text-align: center;
+   color: #5AB7FF;
+   font-size: 25px;
+   margin-top: 10px;
+}
+#blue_hr
+{
+   width: 80%;
+   height: 2px;
+   background-color: #5AB7FF;
+   margin-top: 111px;
+   text-align: center;
+}
+#accepted
+{
+   font-size: 25px;
+   color: white;
+   text-align: center;
+   margin-top: 200px;
+}
+#number
+{
+   font-size: 20px;
+   color: white;
+   text-align: center;
+   margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Widoczność zaznaczenia radio */
+#option1, #option2, #option3, #option4
+{
+   opacity: 0;
+}
+
 .flex-parent
 {
    display: flex;
@@ -83,28 +166,33 @@ header h1
    font-size: 25px;
    color: white;
 }
-hr
-{
-   width: 80%;
-}
-#footer
-{
-   text-align: center;
-   color:white;
-   font-size: 25px;
-}
-
-
-/* Widoczność zaznaczenia radio */
-#option1, #option2, #option3, #option4
-{
-   opacity: 0;
-}
-
 #submit_button
 {
    width: 84px;
    height: 84px;
    border-radius: 50px;
    font-size: 40px;
+}
+#submit_part5
+{
+   width: 536px;
+   height: 60px;
+   background-color: #365ED5;
+   color: white;
+   border: none;
+   border-radius: 30px;
+   margin-top: 48px;
+}
+.rules_checbox_div
+{
+   height: 60px;
+   line-height: 60px;
+   font-size: 25px;
+   margin-top: 20px;
+}
+#accept_rules_checkbox
+{
+   /* width: 60px;
+   height: 60px; */
+   margin-right: 20px;
 }

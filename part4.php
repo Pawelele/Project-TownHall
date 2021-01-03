@@ -74,11 +74,34 @@
           </div>
         </div>
       </div>
-         <hr>
-         <p id="footer">Lorem ipsum, Lorem ipsum, Lorem ipsum</p>
 
+      <div class="sekcja_regulamin">
+        <div class="container">
+          <div class="row">
+            <p>Regulamin</p>
+            <div class="flex-parent jc-center">
+              <div class="regulamin">
+                1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
+                2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
+                3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
+                4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
+                5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
+              </div>
+            </div>
 
+            <form name="form" action="part5.php">
+            <div class="rules_checbox_div"><input id="accept_rules_checkbox" type="checkbox" name="accept_rules" required>Akceptuję regulamin</div><br>
+            <input id="submit_part5" type="submit" name="next" value="Rezerwuję">
+            </form>
+
+            <div class="flex-parent jc-center">
+              <div id="blue_hr"></div>
+            </div>
+            <p id="footer_part4">Lorem ipsum, Lorem ipsum, Lorem ipsum</p>
+          </div>
+        </div>
       </div>
+
 
 
     </body>
