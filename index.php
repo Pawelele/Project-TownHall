@@ -18,65 +18,25 @@
       <!-- End Importing bootstrap -->
 
     </head>
-    <body>
-    <!-- Zaznaczanie pól formularza  -->
-    <script>
+    <!-- Przypisanie zmiennej z poprzedniego etapu -->
+    <?php
 
-      function RadioCheck()
-      {
-        radio1 = document.getElementById("option1");
-        radio2 = document.getElementById("option2");
-        radio3 = document.getElementById("option3");
-        radio4 = document.getElementById("option4");
+      $servername = "localhost";
+      $username = "site_agent";
+      $password = "Projekt_siz_132";
 
+      // Create connection
+      $conn = mysqli_connect($servername, $username, $password, "SIZ_Database");
 
-        if(radio1.checked == true)
-        {
-          document.getElementById("checked1").style.backgroundColor = "#5AB7FF";
-          document.getElementById("checked1").style.transform = "scale(1.03,1.03)"
-        }
-        else
-        {
-          document.getElementById("checked1").style.backgroundColor = "#FFFFFF";
-          document.getElementById("checked1").style.transform = "scale(1,1)"
-        }
-
-        if(radio2.checked == true)
-        {
-          document.getElementById("checked2").style.backgroundColor = "#5AB7FF";
-          document.getElementById("checked2").style.transform = "scale(1.03,1.03)"
-        }
-        else
-        {
-          document.getElementById("checked2").style.backgroundColor = "#FFFFFF";
-          document.getElementById("checked2").style.transform = "scale(1,1)"
-        }
-
-        if(radio3.checked == true)
-        {
-          document.getElementById("checked3").style.backgroundColor = "#5AB7FF";
-          document.getElementById("checked3").style.transform = "scale(1.03,1.03)"
-        }
-        else
-        {
-          document.getElementById("checked3").style.backgroundColor = "#FFFFFF";
-          document.getElementById("checked3").style.transform = "scale(1,1)"
-        }
-
-        if(radio4.checked == true)
-        {
-          document.getElementById("checked4").style.backgroundColor = "#5AB7FF";
-          document.getElementById("checked4").style.transform = "scale(1.03,1.03)"
-        }
-        else
-        {
-          document.getElementById("checked4").style.backgroundColor = "#FFFFFF";
-          document.getElementById("checked4").style.transform = "scale(1,1)"
-        }
-
+      // Check connection
+      if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
       }
-    </script>
+      //echo "Connected successfully";
 
+    ?>
+
+    <body>
       <header>
         <div class="container-fluid">
           <div class="row">
@@ -86,52 +46,42 @@
         </div>
       </header>
 
-      <div class="sekcja1_all">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="round">1</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">2</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">3</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">4</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="sekcja_glowna">
         <div class="container">
           <div class="row">
-            <p id="wybierz_opcje">Wybierz opcje</p>
 
-            <form method="post" class="form" action="part2.php">
+          <div class="flex-parent jc-center">
+            <a href="part1.php"><div class="sign_up">Zapisz się!</div></a>
+          </div>
 
-              <div class="flex-parent jc-center">
-                <label for="option1" id="checked1" class="option" onchange="RadioCheck()">Rejestracja pojazdu, pozostałe sprawy <input type="radio" id="option1" value="XD" name="form_department"></label>
-              </div>
+            <p id="pesel_check_p">Podaj PESEL, aby sprawdzic aktywne zapisy</p>
 
-              <div class="flex-parent jc-center">
-                <label for="option2" id="checked2" class="option" onchange="RadioCheck()">Zgłoszenie zbycia, odbiór stałego dowodu rej. <input type="radio" id="option2" value="XD" name="form_department"></label>
-              </div>
-
-              <div class="flex-parent jc-center">
-                <label for="option3" id="checked3" class="option" onchange="RadioCheck()">Prawo jazdy-odbiór dokumentów (po wymienie lub po egzaminie)<input type="radio" id="option3" value="XD" name="form_department"></label>
-              </div>
-
-              <div class="flex-parent jc-center">
-                <label for="option4" id="checked4" class="option" onchange="RadioCheck()">Prawo jazdy-złoenie wniosku, PKK oraz pozostałe sprawy <input type="radio" id="option4" value="XD" name="form_department"></label>
-              </div>
-
-              <input type="submit" name="next" value=">" id="submit_button">
-
+            <form method="get" action="index.php">
+            <div class="flex-parent jc-center">
+              <input type="text" class="option" name="pesel_check_input" id="pesel_check" placeholder="wpisz pesel">
+            </div>
+            <div class="flex-parent jc-center">
+              <input type="submit" id="main_site_submit" value="Sprawdź">
+            </div>
             </form>
 
+            <div id="pesel_check_list">
+              <?php
+                // włącznik raportowania o błędach
+                error_reporting(0);
+                $q = "SELECT imie, nazwisko, id FROM zapisy WHERE pesel = $_GET[pesel_check_input]";
+
+                $result = mysqli_query($conn, $q) or die("<center>Wprowadź PESEL w polu powyzej</center>");
+                while($row = mysqli_fetch_assoc($result))
+                {
+                  echo("<center> Imie: ".$row['imie']." &nbsp;&nbsp;&nbsp;Nazwisko: ".$row['nazwisko']." &nbsp;&nbsp;&nbsp;Numerek: ".$row['id']."</center>");
+                }
+              ?>
+            </div>
+
+            <?php
+              $conn->close();
+            ?>
           </div>
         </div>
       </div>

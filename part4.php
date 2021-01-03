@@ -92,7 +92,7 @@
 
             <form name="form" action="part5.php">
             <div class="rules_checbox_div"><input id="accept_rules_checkbox" type="checkbox" name="accept_rules" required>Akceptuję regulamin</div><br>
-            <input id="submit_part5" type="submit" name="next" value="Rezerwuję">
+            <input id="submit_part4" type="submit" name="next" value="Rezerwuję">
             </form>
 
             <div class="flex-parent jc-center">

@@ -64,6 +64,7 @@ header h1
    text-align: center;
    font-size: 25px;
    font-weight: 400;
+   border: none;
 }
 
 .option:hover
@@ -174,12 +175,22 @@ hr
    border-radius: 50px;
    font-size: 40px;
 }
-#submit_part5
+#submit_part4
 {
    width: 536px;
    height: 60px;
    background-color: #365ED5;
    color: white;
+   border: none;
+   border-radius: 30px;
+   margin-top: 48px;
+}
+#main_site_submit
+{
+   width: 536px;
+   height: 60px;
+   background-color: white;
+   color: #365ED5;
    border: none;
    border-radius: 30px;
    margin-top: 48px;
@@ -196,4 +207,35 @@ hr
    /* width: 60px;
    height: 60px; */
    margin-right: 20px;
+}
+#pesel_check_p
+{
+   text-align: center;
+   font-size: 25px;
+   color: white;
+   margin-top: 50px;
+}
+#pesel_check
+{
+   margin-top: 30px;
+}
+#pesel_check_list
+{
+   font-size: 25px;
+   color: white;
+   margin-top: 30px;
+}
+.sign_up
+{
+   width: 500px;
+   height: 80px;
+   line-height: 80px;
+   border-radius: 20px;
+   background-color: white;
+   color: #514F54;
+   margin-top: 30px;
+   text-align: center;
+   font-size: 30px;
+   font-weight: 500;
+   border: none;
 }
