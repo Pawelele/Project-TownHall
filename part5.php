@@ -26,13 +26,21 @@
       $username = "site_agent";
       $password = "Projekt_siz_132";
 
-      try {
-        $conn = new PDO("mysql:host=$servername;dbname=SIZ_Database", $username, $password);
-        // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connected successfully";
-      } catch(PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
+      // Create connection
+      $conn = mysqli_connect($servername, $username, $password, "SIZ_Database");
+
+      // Check connection
+      if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+      }
+      echo "Connected successfully";
+
+      $sql="INSERT INTO zapisy (operacja, termin, imie, nazwisko, email, potwierdzenie ,login) VALUES ('$_SESSION[department]','$_SESSION[picked_date]', '$_SESSION[name]', '$_SESSION[surname]', '$_SESSION[email]', false , 'Marcin (test)')";
+
+      if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
       }
     ?>
 
@@ -48,7 +56,10 @@
 
       <div class="sekcja_glowna">
         <div class="container">
+
           <div class="row">
+
+
             <p id="accepted">Twoja rezerwacja została dodana</p>
             <p id="number">Twój numerek: xxx</p>
 
