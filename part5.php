@@ -36,15 +36,6 @@
       // echo "Connected successfully";
 
       $sql="INSERT INTO zapisy (operacja, termin, imie, nazwisko, email, potwierdzenie , pesel) VALUES ('$_SESSION[department]','$_SESSION[picked_date]', '$_SESSION[name]', '$_SESSION[surname]', '$_SESSION[email]', false , '$_SESSION[pesel]')";
-
-      // Odczyt id zapisanego własnie rekordu na potrzeby wyświetlenia numerka
-      $q = "SELECT id FROM zapisy where pesel = '$_SESSION[pesel]' ORDER BY id ASC LIMIT 1";
-
-      $result = mysqli_query($conn, $q) or die("Problemy z odczytem danych!");
-      while($row = mysqli_fetch_assoc($result))
-      {
-        $_SESSION['ticket'] = $row['id'];
-      }
     ?>
 
     <body>
@@ -74,11 +65,24 @@
             <div id="number">
                 Twój numerek:
                 <?php
+                  $_SESSION['ticket'] = "Brak przypisanego numerka.<br> Jeśli odświezyłeś przegladarke, przejdz do strony głównej, aby sprawdzić swoją rezerwacje.";
+                  sleep(1);
+                  // Odczyt id zapisanego własnie rekordu na potrzeby wyświetlenia numerka oraz wyswietlenie
+                  $q = "SELECT id FROM zapisy where pesel= '$_SESSION[pesel]' and pesel != 0 ORDER BY id DESC LIMIT 1";
+
+                  $result = mysqli_query($conn, $q) or die("Problemy z odczytem danych!");
+                  while($row = mysqli_fetch_assoc($result))
+                  {
+                    $_SESSION['ticket'] = $row['id'];
+                  }
                   echo $_SESSION['ticket'];
                 ?>
             </div>
 
-
+            <?php
+              $conn->close();
+              session_destroy();
+            ?>
           </div>
         </div>
       </div>
