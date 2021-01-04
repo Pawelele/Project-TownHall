@@ -57,7 +57,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="round">4</div>
-                    <p>Regulamin i potwierdzenie</p>
+                    <p>Potwierdzenie</p>
                   </div>
                 </div>
               </div>
@@ -70,7 +70,7 @@
 
               <form method="post" class="formularz" action="part3.php">
                 <div class="flex-parent jc-center">
-                  <input type="date" name="choose_date" class="option">
+                  <input type="date" name="choose_date" class="option" id="no_color_change">
                 </div>
                 <div class="flex-parent jc-center">
                   <input type="submit" name="next" value=">" id="submit_button">

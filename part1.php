@@ -110,7 +110,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="round">4</div>
-                    <p> Regulamin i potwierdzenie</p>
+                    <p>Potwierdzenie</p>
                   </div>
                 </div>
               </div>

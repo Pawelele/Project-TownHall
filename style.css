@@ -22,6 +22,12 @@ header
    background-color: white;
    height: 125px;
    line-height: 125px;
+   font-size: 35px;
+   color: #514F54;
+}
+header img
+{
+   margin-right: 15px;
 }
 #logo
 {
@@ -47,7 +53,7 @@ header h1
    border: none;
    width: 80px;
    height: 80px;
-   line-height: 80px;;
+   line-height: 80px;
    border-radius: 50px;
    text-align: center;
    margin-top: 175px;
@@ -107,6 +113,7 @@ header h1
    font-size: 25px;
    font-weight: 400;
    border: none;
+   transition: 0.25s;
 }
 #part4_option
 {
@@ -117,6 +124,10 @@ header h1
 {
    background-color: #5AB7FF !important;
    transform: scale(1.01);
+}
+#no_color_change:hover
+{
+   background-color: white !important;
 }
 
 .sekcja_regulamin
@@ -225,6 +236,7 @@ hr
    font-weight: 300;
    border: none;
    margin-top: 35px;
+   background-color: white;;
 }
 #submit_part4
 {

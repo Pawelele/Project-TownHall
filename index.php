@@ -58,7 +58,7 @@
 
             <form method="get" action="index.php">
             <div class="flex-parent jc-center">
-              <input type="text" class="option" name="pesel_check_input" id="pesel_check" placeholder="wpisz pesel">
+              <input type="text" class="option" id="no_color_change" name="pesel_check_input" id="pesel_check" placeholder="wpisz pesel">
             </div>
             <div class="flex-parent jc-center">
               <input type="submit" id="main_site_submit" value="Sprawdź">

@@ -28,7 +28,7 @@
     ?>
 
     <body>
-      <div class="all_body_part4">
+      <div class="all_body">
         <header>
           <div class="container-fluid">
             <div class="row">
@@ -42,41 +42,45 @@
 
         <div class="sekcja_glowna">
 
-          <center>
-            <div class="sekcja1_all">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="round">1</div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="round">2</div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="round">3</div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="actual_round">4</div>
-                  </div>
+        <center>
+          <div class="sekcja1_all">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="round">1</div>
+                  <p>Dział</p>
+                </div>
+                <div class="col-md-3">
+                  <div class="round">2</div>
+                  <p>Termin</p>
+                </div>
+                <div class="col-md-3">
+                  <div class="round">3</div>
+                  <p>Dane</p>
+                </div>
+                <div class="col-md-3">
+                  <div class="actual_round">4</div>
+                  <p>Potwierdzenie</p>
                 </div>
               </div>
             </div>
-          </center>
+          </div>
+        </center>
 
           <div class="container">
             <div class="row">
-              <p id="wybierz_opcje_part4">Dane rezerwacji</p>
+              <p id="wybierz_opcje">Dane rezerwacji</p>
                 <div class="flex-parent jc-center">
-                  <div class="option" id="part4_option">Twoje imie: <a><?php echo $_SESSION['name']?></a></div>
+                  <div class="option" id="no_color_change" id="part4_option">Twoje imie: <a><?php echo $_SESSION['name']?></a></div>
                 </div>
                 <div class="flex-parent jc-center">
-                  <div class="option">Twoje nazwisko: <a><?php echo $_SESSION['surname']?></a></div>
+                  <div class="option" id="no_color_change">Twoje nazwisko: <a><?php echo $_SESSION['surname']?></a></div>
                 </div>
                 <div class="flex-parent jc-center">
-                  <div class="option">Twój email: <a><?php echo $_SESSION['email']?></a></div>
+                  <div class="option" id="no_color_change">Twój email: <a><?php echo $_SESSION['email']?></a></div>
                 </div>
                 <div class="flex-parent jc-center">
-                  <div class="option">Twój termin: <a><?php echo $_SESSION['picked_date']?></a></div>
+                  <div class="option" id="no_color_change">Twój termin: <a><?php echo $_SESSION['picked_date']?></a></div>
                 </div>
             </div>
           </div>

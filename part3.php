@@ -28,9 +28,9 @@
       <div class="all_body">
         <header>
           <div class="container-fluid">
-            <div class="row">
+            <div class="row" id="naglowek">
               <a href=index.php><img id="logo" src="logo@2x.png"></a>
-              <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
+              <p>Urząd Miejski w Katowicach, Wydział XYZ</p>
             </div>
           </div>
         </header>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="col-md-3">
                   <div class="round">4</div>
-                  <p>Regulamin i potwierdzenie</p>
+                  <p>Potwierdzenie</p>
                 </div>
               </div>
             </div>
@@ -72,19 +72,19 @@
 
                 <!-- <p id="font25">Imie</p> -->
                 <div class="flex-parent jc-center">
-                  <input type="text" class="option" name="personal_name" placeholder="tutaj wpisz imie">
+                  <input type="text" class="option" id="no_color_change" name="personal_name" placeholder="tutaj wpisz imie">
                 </div>
                 <!-- <p id="font25">Nazwisko</p> -->
                 <div class="flex-parent jc-center">
-                  <input type="text" class="option" name="personal_surname" placeholder="tutaj wpisz naziwsko">
+                  <input type="text" class="option" id="no_color_change" name="personal_surname" placeholder="tutaj wpisz nazwisko">
                 </div>
                 <!-- <p id="font25">Pesel</p> -->
                 <div class="flex-parent jc-center">
-                  <input type="text" class="option" name="personal_pesel" placeholder="tutaj wpisz PESEL" minlength="11" maxlength="11">
+                  <input type="text" class="option" id="no_color_change" name="personal_pesel" placeholder="tutaj wpisz PESEL" minlength="11" maxlength="11" required>
                 </div>
                 <!-- <p id="font25">Email</p> -->
                 <div class="flex-parent jc-center">
-                  <input type="text" class="option" name="personal_email" placeholder="tutaj wpisz email">
+                  <input type="text" class="option" id="no_color_change" name="personal_email" placeholder="tutaj wpisz email">
                 </div>
                 <div class="flex-parent jc-center">
                   <input type="submit" name="next" value=">" id="submit_button">
