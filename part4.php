@@ -28,82 +28,88 @@
     ?>
 
     <body>
-      <header>
-        <div class="container-fluid">
-          <div class="row">
-            <a href=index.php><img id="logo" src="logo@2x.png"></a>
-            <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
+      <div class="all_body_part4">
+        <header>
+          <div class="container-fluid">
+            <div class="row">
+              <a href=index.php><img id="logo" src="logo@2x.png"></a>
+              <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <div class="sekcja1_all">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="round">1</div>
+
+
+        <div class="sekcja_glowna">
+
+          <center>
+            <div class="sekcja1_all">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="round">1</div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="round">2</div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="round">3</div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="actual_round">4</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-3">
-              <div class="round">2</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">3</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">4</div>
+          </center>
+
+          <div class="container">
+            <div class="row">
+              <p id="wybierz_opcje_part4">Dane rezerwacji</p>
+                <div class="flex-parent jc-center">
+                  <div class="option" id="part4_option">Twoje imie: <a><?php echo $_SESSION['name']?></a></div>
+                </div>
+                <div class="flex-parent jc-center">
+                  <div class="option">Twoje nazwisko: <a><?php echo $_SESSION['surname']?></a></div>
+                </div>
+                <div class="flex-parent jc-center">
+                  <div class="option">Twój email: <a><?php echo $_SESSION['email']?></a></div>
+                </div>
+                <div class="flex-parent jc-center">
+                  <div class="option">Twój termin: <a><?php echo $_SESSION['picked_date']?></a></div>
+                </div>
             </div>
           </div>
         </div>
+
+        <div class="sekcja_regulamin">
+          <div class="container">
+            <div class="row">
+              <p>Regulamin</p>
+              <div class="flex-parent jc-center">
+                <div class="regulamin">
+                  1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
+                  2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
+                  3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
+                  4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
+                  5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
+                </div>
+              </div>
+
+              <form name="form" action="part5.php">
+              <div class="rules_checbox_div"><input id="accept_rules_checkbox" type="checkbox" name="accept_rules" required>Akceptuję regulamin</div><br>
+              <input id="submit_part4" type="submit" name="next" value="Rezerwuję">
+              </form>
+
+              <div class="flex-parent jc-center">
+                <div id="blue_hr"></div>
+              </div>
+              <p id="footer_part4">Lorem ipsum, Lorem ipsum, Lorem ipsum</p>
+            </div>
+          </div>
+        </div>
+
+
       </div>
-
-      <div class="sekcja_glowna">
-        <div class="container">
-          <div class="row">
-            <p id="wybierz_opcje">Dane rezerwacji</p>
-              <div class="flex-parent jc-center">
-                <div class="option">Twoje imie: <a><?php echo $_SESSION['name']?></a></div>
-              </div>
-              <div class="flex-parent jc-center">
-                <div class="option">Twoje nazwisko: <a><?php echo $_SESSION['surname']?></a></div>
-              </div>
-              <div class="flex-parent jc-center">
-                <div class="option">Twój email: <a><?php echo $_SESSION['email']?></a></div>
-              </div>
-              <div class="flex-parent jc-center">
-                <div class="option">Twój termin: <a><?php echo $_SESSION['picked_date']?></a></div>
-              </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="sekcja_regulamin">
-        <div class="container">
-          <div class="row">
-            <p>Regulamin</p>
-            <div class="flex-parent jc-center">
-              <div class="regulamin">
-                1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
-                2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
-                3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
-                4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
-                5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
-              </div>
-            </div>
-
-            <form name="form" action="part5.php">
-            <div class="rules_checbox_div"><input id="accept_rules_checkbox" type="checkbox" name="accept_rules" required>Akceptuję regulamin</div><br>
-            <input id="submit_part4" type="submit" name="next" value="Rezerwuję">
-            </form>
-
-            <div class="flex-parent jc-center">
-              <div id="blue_hr"></div>
-            </div>
-            <p id="footer_part4">Lorem ipsum, Lorem ipsum, Lorem ipsum</p>
-          </div>
-        </div>
-      </div>
-
-
-
     </body>
 </html>

@@ -54,7 +54,7 @@
             <a href="part1.php"><div class="sign_up">Zapisz się!</div></a>
           </div>
 
-            <p id="pesel_check_p">Podaj PESEL, aby sprawdzic aktywne zapisy</p>
+            <p id="pesel_check_p">Podaj PESEL, aby sprawdzić aktywne zapisy</p>
 
             <form method="get" action="index.php">
             <div class="flex-parent jc-center">

@@ -76,71 +76,84 @@
 
       }
     </script>
+      <div class="all_body">
 
-      <header>
-        <div class="container-fluid">
-          <div class="row">
-            <a href=index.php><img id="logo" src="logo@2x.png"></a>
-            <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
-          </div>
-        </div>
-      </header>
-
-      <div class="sekcja1_all">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="round">1</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">2</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">3</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">4</div>
+        <header>
+          <div class="container-fluid">
+            <div class="row">
+              <a href=index.php><img id="logo" src="logo@2x.png"></a>
+              <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
             </div>
           </div>
-        </div>
-      </div>
+        </header>
 
-      <div class="sekcja_glowna">
-        <div class="container">
-          <div class="row">
-            <p id="wybierz_opcje">Wybierz opcje</p>
 
-            <form method="post" class="form" action="part2.php">
 
-              <div class="flex-parent jc-center">
-                <label for="option1" id="checked1" class="option" onchange="RadioCheck()">Rejestracja pojazdu, pozostałe sprawy <input type="radio" id="option1" value="XD" name="form_department"></label>
+
+        <div class="sekcja_glowna">
+
+          <center>
+            <div class="sekcja1_all">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="actual_round">1</div>
+                    <p>Dział</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="round">2</div>
+                    <p>Termin</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="round">3</div>
+                    <p>Dane</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="round">4</div>
+                    <p> Regulamin i potwierdzenie</p>
+                  </div>
+                </div>
               </div>
+            </div>
+          </center>
 
-              <div class="flex-parent jc-center">
-                <label for="option2" id="checked2" class="option" onchange="RadioCheck()">Zgłoszenie zbycia, odbiór stałego dowodu rej. <input type="radio" id="option2" value="XD" name="form_department"></label>
-              </div>
+          <div class="container">
+            <div class="row">
+              <p id="wybierz_opcje">Wybierz opcje</p>
 
-              <div class="flex-parent jc-center">
-                <label for="option3" id="checked3" class="option" onchange="RadioCheck()">Prawo jazdy-odbiór dokumentów (po wymienie lub po egzaminie)<input type="radio" id="option3" value="XD" name="form_department"></label>
-              </div>
+              <form method="post" class="form" action="part2.php">
 
-              <div class="flex-parent jc-center">
-                <label for="option4" id="checked4" class="option" onchange="RadioCheck()">Prawo jazdy-złoenie wniosku, PKK oraz pozostałe sprawy <input type="radio" id="option4" value="XD" name="form_department"></label>
-              </div>
+                <div class="flex-parent jc-center">
+                  <label for="option1" id="checked1" class="option" onchange="RadioCheck()">Rejestracja pojazdu, pozostałe sprawy <input type="radio" id="option1" value="XD" name="form_department"></label>
+                </div>
 
-              <input type="submit" name="next" value=">" id="submit_button">
+                <div class="flex-parent jc-center">
+                  <label for="option2" id="checked2" class="option" onchange="RadioCheck()">Zgłoszenie zbycia, odbiór stałego dowodu rej. <input type="radio" id="option2" value="XD" name="form_department"></label>
+                </div>
 
-            </form>
+                <div class="flex-parent jc-center">
+                  <label for="option3" id="checked3" class="option" onchange="RadioCheck()">Prawo jazdy-odbiór dokumentów (po wymienie lub po egzaminie)<input type="radio" id="option3" value="XD" name="form_department"></label>
+                </div>
 
+                <div class="flex-parent jc-center">
+                  <label for="option4" id="checked4" class="option" onchange="RadioCheck()">Prawo jazdy-złoenie wniosku, PKK oraz pozostałe sprawy <input type="radio" id="option4" value="XD" name="form_department"></label>
+                </div>
+
+                <div class="flex-parent jc-center">
+                  <input type="submit" name="next" value=">" id="submit_button">
+                </div>
+
+              </form>
+
+            </div>
           </div>
         </div>
+          <hr>
+          <p id="footer">Lorem ipsum, Lorem ipsum, Lorem ipsum</p>
+
+
+        </div>
+
       </div>
-         <hr>
-         <p id="footer">Lorem ipsum, Lorem ipsum, Lorem ipsum</p>
-
-
-      </div>
-
-
     </body>
 </html>

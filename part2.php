@@ -25,55 +25,67 @@
     ?>
 
     <body>
-      <header>
-        <div class="container-fluid">
-          <div class="row">
-            <a href=index.php><img id="logo" src="logo@2x.png"></a>
-            <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
-          </div>
-        </div>
-      </header>
-
-      <div class="sekcja1_all">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="round">1</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">2</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">3</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">4</div>
+      <div class="all_body">
+        <header>
+          <div class="container-fluid">
+            <div class="row">
+              <a href=index.php><img id="logo" src="logo@2x.png"></a>
+              <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
             </div>
           </div>
-        </div>
-      </div>
+        </header>
 
-      <div class="sekcja_glowna">
-        <div class="container">
-          <div class="row">
-            <p id="wybierz_opcje">Wpisz swój termin</p>
 
-            <form method="post" class="formularz" action="part3.php">
-              <div class="flex-parent jc-center">
-                <input type="date" name="choose_date" class="option">
+
+        <div class="sekcja_glowna">
+
+          <center>
+            <div class="sekcja1_all">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="round">1</div>
+                    <p>Dział</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="actual_round">2</div>
+                    <p>Termin</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="round">3</div>
+                    <p>Dane</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="round">4</div>
+                    <p>Regulamin i potwierdzenie</p>
+                  </div>
+                </div>
               </div>
-              <input type="submit" name="next" value=">" id="submit_button">
-            </form>
+            </div>
+          </center>
 
+          <div class="container">
+            <div class="row">
+              <p id="wybierz_opcje">Wpisz swój termin</p>
+
+              <form method="post" class="formularz" action="part3.php">
+                <div class="flex-parent jc-center">
+                  <input type="date" name="choose_date" class="option">
+                </div>
+                <div class="flex-parent jc-center">
+                  <input type="submit" name="next" value=">" id="submit_button">
+                </div>
+              </form>
+
+            </div>
           </div>
         </div>
+          <hr>
+          <p id="footer">Lorem ipsum, Lorem ipsum, Lorem ipsum</p>
+
+
+        </div>
+
       </div>
-         <hr>
-         <p id="footer">Lorem ipsum, Lorem ipsum, Lorem ipsum</p>
-
-
-      </div>
-
-
     </body>
 </html>

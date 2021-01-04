@@ -25,70 +25,82 @@
     ?>
 
     <body>
-      <header>
-        <div class="container-fluid">
-          <div class="row">
-            <a href=index.php><img id="logo" src="logo@2x.png"></a>
-            <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
-          </div>
-        </div>
-      </header>
-
-      <div class="sekcja1_all">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="round">1</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">2</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">3</div>
-            </div>
-            <div class="col-md-3">
-              <div class="round">4</div>
+      <div class="all_body">
+        <header>
+          <div class="container-fluid">
+            <div class="row">
+              <a href=index.php><img id="logo" src="logo@2x.png"></a>
+              <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
             </div>
           </div>
-        </div>
-      </div>
+        </header>
 
-      <div class="sekcja_glowna">
-        <div class="container">
-          <div class="row">
-            <p id="wybierz_opcje">Wpisz swoje dane</p>
 
-            <form method="post" class="formularz" action="part4.php">
 
-              <!-- <p id="font25">Imie</p> -->
-              <div class="flex-parent jc-center">
-                <input type="text" class="option" name="personal_name" placeholder="tutaj wpisz imie">
+        <div class="sekcja_glowna">
+
+        <center>
+          <div class="sekcja1_all">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="round">1</div>
+                  <p>Dział</p>
+                </div>
+                <div class="col-md-3">
+                  <div class="round">2</div>
+                  <p>Termin</p>
+                </div>
+                <div class="col-md-3">
+                  <div class="actual_round">3</div>
+                  <p>Dane</p>
+                </div>
+                <div class="col-md-3">
+                  <div class="round">4</div>
+                  <p>Regulamin i potwierdzenie</p>
+                </div>
               </div>
-              <!-- <p id="font25">Nazwisko</p> -->
-              <div class="flex-parent jc-center">
-                <input type="text" class="option" name="personal_surname" placeholder="tutaj wpisz naziwsko">
-              </div>
-              <!-- <p id="font25">Pesel</p> -->
-              <div class="flex-parent jc-center">
-                <input type="text" class="option" name="personal_pesel" placeholder="tutaj wpisz PESEL" minlength="11" maxlength="11">
-              </div>
-              <!-- <p id="font25">Email</p> -->
-              <div class="flex-parent jc-center">
-                <input type="text" class="option" name="personal_email" placeholder="tutaj wpisz email">
-              </div>
-              <input type="submit" name="next" value=">" id="submit_button">
+            </div>
+          </div>
+        </center>
 
-            </form>
+          <div class="container">
+            <div class="row">
+              <p id="wybierz_opcje">Wpisz swoje dane</p>
 
+              <form method="post" class="formularz" action="part4.php">
+
+                <!-- <p id="font25">Imie</p> -->
+                <div class="flex-parent jc-center">
+                  <input type="text" class="option" name="personal_name" placeholder="tutaj wpisz imie">
+                </div>
+                <!-- <p id="font25">Nazwisko</p> -->
+                <div class="flex-parent jc-center">
+                  <input type="text" class="option" name="personal_surname" placeholder="tutaj wpisz naziwsko">
+                </div>
+                <!-- <p id="font25">Pesel</p> -->
+                <div class="flex-parent jc-center">
+                  <input type="text" class="option" name="personal_pesel" placeholder="tutaj wpisz PESEL" minlength="11" maxlength="11">
+                </div>
+                <!-- <p id="font25">Email</p> -->
+                <div class="flex-parent jc-center">
+                  <input type="text" class="option" name="personal_email" placeholder="tutaj wpisz email">
+                </div>
+                <div class="flex-parent jc-center">
+                  <input type="submit" name="next" value=">" id="submit_button">
+                </div>
+
+              </form>
+
+            </div>
           </div>
         </div>
+          <hr>
+          <p id="footer">Lorem ipsum, Lorem ipsum, Lorem ipsum</p>
+
+
+        </div>
+
       </div>
-         <hr>
-         <p id="footer">Lorem ipsum, Lorem ipsum, Lorem ipsum</p>
-
-
-      </div>
-
-
     </body>
 </html>
