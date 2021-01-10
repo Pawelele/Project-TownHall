@@ -303,3 +303,53 @@ hr
    font-weight: 500;
    border: none;
 }
+td
+{
+   border: 1px solid white;
+   padding: 5px !important;
+}
+.panel_login
+{
+   width: 512px;
+   height: 60px;
+   line-height: 60px;
+   border-radius: 30px;
+   background-color: white;
+   color: #514F54;
+   margin-bottom: 15px;
+   text-align: center;
+   font-size: 25px;
+   font-weight: 400;
+   border: none;
+   transition: 0.25s;
+}
+.panel_login_submit
+{
+   width: 312px;
+   height: 70px;
+   line-height: 70px;
+   border-radius: 20px;
+   background-color: white;
+   color: #514F54;
+   margin-bottom: 15px;
+   text-align: center;
+   font-size: 25px;
+   font-weight: 400;
+   border: none;
+   transition: 0.25s;
+   margin-top: 50px;
+}
+
+.panel_login_submit:hover
+{
+   transform: scale(1.02);
+   background-color: #5AB7FF;
+   color: white;
+}
+#login_failed_p
+{
+   color: red;
+   font-size: 20px;
+   margin-top: 30px;
+   text-align: center;
+}

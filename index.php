@@ -41,7 +41,7 @@
         <div class="container-fluid">
           <div class="row">
             <a href=index.php><img id="logo" src="logo@2x.png"></a>
-            <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
+            <p>Urząd Miejski w Katowicach, Wydział XYZ</p>
           </div>
         </div>
       </header>
@@ -57,12 +57,12 @@
             <p id="pesel_check_p">Podaj PESEL, aby sprawdzić aktywne zapisy</p>
 
             <form method="get" action="index.php">
-            <div class="flex-parent jc-center">
-              <input type="text" class="option" id="no_color_change" name="pesel_check_input" id="pesel_check" placeholder="wpisz pesel">
-            </div>
-            <div class="flex-parent jc-center">
-              <input type="submit" id="main_site_submit" value="Sprawdź">
-            </div>
+              <div class="flex-parent jc-center">
+                <input type="text" class="option" id="no_color_change" name="pesel_check_input" id="pesel_check" placeholder="wpisz pesel">
+              </div>
+              <div class="flex-parent jc-center">
+                <input type="submit" id="main_site_submit" value="Sprawdź">
+              </div>
             </form>
 
             <div id="pesel_check_list">
@@ -85,8 +85,8 @@
           </div>
         </div>
       </div>
-         <hr>
-         <p id="footer">Lorem ipsum, Lorem ipsum, Lorem ipsum</p>
+         <!-- <hr>
+         <p id="footer">Lorem ipsum, Lorem ipsum, Lorem ipsum</p> -->
 
 
       </div>

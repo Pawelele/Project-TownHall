@@ -30,7 +30,7 @@
           <div class="container-fluid">
             <div class="row">
               <a href=index.php><img id="logo" src="logo@2x.png"></a>
-              <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
+              <p>Urząd Miejski w Katowicach, Wydział XYZ</p>
             </div>
           </div>
         </header>

@@ -21,7 +21,6 @@
     <!-- Przypisanie zmiennej z poprzedniego etapu -->
     <?php
       session_start();
-
       $servername = "localhost";
       $username = "site_agent";
       $password = "Projekt_siz_132";
@@ -33,9 +32,23 @@
       if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
       }
-      // echo "Connected successfully";
+      //echo "Connected successfully";
 
-      $sql="INSERT INTO zapisy (operacja, termin, imie, nazwisko, email, potwierdzenie , pesel) VALUES ('$_SESSION[department]','$_SESSION[picked_date]', '$_SESSION[name]', '$_SESSION[surname]', '$_SESSION[email]', false , '$_SESSION[pesel]')";
+      $_SESSION["session_login"] = $_POST['login'];
+      $_SESSION["session_password"] = $_POST['password'];
+
+      $q = "SELECT login, password from users";
+      $result = mysqli_query($conn, $q) or die("<center>Błąd połączenia z bazą danych!</center>");
+      while($row = mysqli_fetch_assoc($result))
+      {
+        if($_SESSION["session_login"] == $row['login'] &&  $_SESSION["session_password"]== $row['password'])
+        {
+            $logowanie= "true";
+        }
+      }
+
+      if($logowanie =="true")
+      {
     ?>
 
     <body>
@@ -51,37 +64,25 @@
       <div class="sekcja_glowna">
         <div class="container">
           <div class="row">
+            <p id="pesel_check_p">Aktywne zapisy</p>
 
-            <div id="accepted">
+            <div id="pesel_check_list">
               <?php
-                if ($conn->query($sql) === TRUE) {
-                  echo "Twoja rezerwacja została dodana";
-                } else {
-                  echo "Error: " . $sql . "<br>" . $conn->error;
+                // włącznik raportowania o błędach
+                error_reporting(0);
+                $q = "SELECT id, operacja , imie, nazwisko, email, pesel, termin FROM zapisy where imie != '' or nazwisko != ''";
+                $result = mysqli_query($conn, $q) or die("<center>Błąd wyświetlenia zapisów!</center>");
+                echo("<center><table>");
+                while($row = mysqli_fetch_assoc($result))
+                {
+                  echo("<tr><td>".$row['id']."</td>"."<td>".$row['imie']."</td>"."<td>".$row['nazwisko']."</td>"."<td>".$row['email']."</td>"."<td>".$row['pesel']."</td>"."<td>".$row['termin']."</td>"."</td></tr>");
                 }
+                echo("</table></center>");
               ?>
-            </div>
-
-            <div id="number">
-                Twój numerek:
-                <?php
-                  $_SESSION['ticket'] = "Brak przypisanego numerka.<br> Jeśli odświezyłeś przegladarke, przejdz do strony głównej, aby sprawdzić swoją rezerwacje.";
-                  sleep(1);
-                  // Odczyt id zapisanego własnie rekordu na potrzeby wyświetlenia numerka oraz wyswietlenie
-                  $q = "SELECT id FROM zapisy where pesel= '$_SESSION[pesel]' and pesel != 0 ORDER BY id DESC LIMIT 1";
-
-                  $result = mysqli_query($conn, $q) or die("Problemy z odczytem danych!");
-                  while($row = mysqli_fetch_assoc($result))
-                  {
-                    $_SESSION['ticket'] = $row['id'];
-                  }
-                  echo $_SESSION['ticket'];
-                ?>
             </div>
 
             <?php
               $conn->close();
-              session_destroy();
             ?>
           </div>
         </div>
@@ -94,4 +95,14 @@
 
 
     </body>
+
+    <?php
+      }
+      else
+      {
+        echo "<script type=\"text/javascript\">
+        window.setTimeout(\"window.location.replace('login_failed.php');\",1);
+        </script>";
+      }
+    ?>
 </html>

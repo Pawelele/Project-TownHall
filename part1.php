@@ -29,7 +29,6 @@
         radio3 = document.getElementById("option3");
         radio4 = document.getElementById("option4");
 
-
         if(radio1.checked == true)
         {
           document.getElementById("checked1").style.backgroundColor = "#5AB7FF";
@@ -82,7 +81,7 @@
           <div class="container-fluid">
             <div class="row">
               <a href=index.php><img id="logo" src="logo@2x.png"></a>
-              <h1>Urząd Miejski w Katowicach, Wydział XYZ</h1>
+              <p>Urząd Miejski w Katowicach, Wydział XYZ</p>
             </div>
           </div>
         </header>
@@ -124,19 +123,19 @@
               <form method="post" class="form" action="part2.php">
 
                 <div class="flex-parent jc-center">
-                  <label for="option1" id="checked1" class="option" onchange="RadioCheck()">Rejestracja pojazdu, pozostałe sprawy <input type="radio" id="option1" value="XD" name="form_department"></label>
+                  <label for="option1" id="checked1" class="option" onchange="RadioCheck()">Rejestracja pojazdu, pozostałe sprawy <input type="radio" id="option1" value="1. Rej pojazdu" name="form_department"></label>
                 </div>
 
                 <div class="flex-parent jc-center">
-                  <label for="option2" id="checked2" class="option" onchange="RadioCheck()">Zgłoszenie zbycia, odbiór stałego dowodu rej. <input type="radio" id="option2" value="XD" name="form_department"></label>
+                  <label for="option2" id="checked2" class="option" onchange="RadioCheck()">Zgłoszenie zbycia, odbiór stałego dowodu rej. <input type="radio" id="option2" value="2. zgl zbyc, odb dow rej" name="form_department"></label>
                 </div>
 
                 <div class="flex-parent jc-center">
-                  <label for="option3" id="checked3" class="option" onchange="RadioCheck()">Prawo jazdy-odbiór dokumentów (po wymienie lub po egzaminie)<input type="radio" id="option3" value="XD" name="form_department"></label>
+                  <label for="option3" id="checked3" class="option" onchange="RadioCheck()">Prawo jazdy-odbiór dokumentów (po wymienie lub po egzaminie)<input type="radio" id="option3" value="3. Prawo jazdy odbior" name="form_department"></label>
                 </div>
 
                 <div class="flex-parent jc-center">
-                  <label for="option4" id="checked4" class="option" onchange="RadioCheck()">Prawo jazdy-złoenie wniosku, PKK oraz pozostałe sprawy <input type="radio" id="option4" value="XD" name="form_department"></label>
+                  <label for="option4" id="checked4" class="option" onchange="RadioCheck()">Prawo jazdy-złoenie wniosku, PKK oraz pozostałe sprawy <input type="radio" id="option4" value="4. Prawo jazdy wniosek" name="form_department"></label>
                 </div>
 
                 <div class="flex-parent jc-center">
