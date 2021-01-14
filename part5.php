@@ -79,6 +79,23 @@
                 ?>
             </div>
 
+            <div id="number">
+                Zapisałeś się na termin:
+                <?php
+                  $_SESSION['data_wybrana'] = "Brak wybranego terminu";
+                  sleep(1);
+                  // Odczyt id zapisanego własnie rekordu na potrzeby wyświetlenia numerka oraz wyswietlenie
+                  $q = "SELECT termin FROM zapisy where pesel= '$_SESSION[pesel]' and pesel != 0 ORDER BY id DESC LIMIT 1";
+
+                  $result = mysqli_query($conn, $q) or die("Problemy z odczytem danych!");
+                  while($row = mysqli_fetch_assoc($result))
+                  {
+                    $_SESSION['data_wybrana'] = $row['termin'];
+                  }
+                  echo $_SESSION['data_wybrana'];
+                ?>
+            </div>
+
             <?php
               $conn->close();
               session_destroy();

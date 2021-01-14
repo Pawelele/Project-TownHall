@@ -69,12 +69,12 @@
               <?php
                 // włącznik raportowania o błędach
                 error_reporting(0);
-                $q = "SELECT imie, nazwisko, id FROM zapisy WHERE pesel = $_GET[pesel_check_input]";
+                $q = "SELECT imie, nazwisko, termin, id FROM zapisy WHERE pesel = $_GET[pesel_check_input]";
 
                 $result = mysqli_query($conn, $q) or die("<center>Wprowadź PESEL w polu powyzej</center>");
                 while($row = mysqli_fetch_assoc($result))
                 {
-                  echo("<center> Imie: ".$row['imie']." &nbsp;&nbsp;&nbsp;Nazwisko: ".$row['nazwisko']." &nbsp;&nbsp;&nbsp;Numerek: ".$row['id']."</center>");
+                  echo("<center> Imie: ".$row['imie']." &nbsp;&nbsp;&nbsp;Nazwisko: ".$row['nazwisko']." &nbsp;&nbsp;&nbsp;Data: ".$row['termin']." &nbsp;&nbsp;&nbsp;Numerek: ".$row['id']."</center>");
                 }
               ?>
             </div>
