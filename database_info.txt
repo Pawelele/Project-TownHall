@@ -1,0 +1,9 @@
+MariaDB Database:
+
+DB name: SIZ_Database
+
+User: site_agent (full privileges)
+
+Password: Projekt_siz_132
+
+Copy of the database using mysqldump in file named siz_database.
