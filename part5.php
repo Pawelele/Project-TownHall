@@ -20,6 +20,7 @@
     </head>
     <!-- Przypisanie zmiennej z poprzedniego etapu -->
     <?php
+      error_reporting(0);
       session_start();
 
       $servername = "localhost";
@@ -30,20 +31,26 @@
       $conn = mysqli_connect($servername, $username, $password, "SIZ_Database");
 
       // Check connection
-      if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-      }
+      // if (!$conn) {
+      //   die("Connection failed: " . mysqli_connect_error());
+      // }
       // echo "Connected successfully";
 
       $sql="INSERT INTO zapisy (operacja, termin, imie, nazwisko, email, potwierdzenie , pesel) VALUES ('$_SESSION[department]','$_SESSION[picked_date]', '$_SESSION[name]', '$_SESSION[surname]', '$_SESSION[email]', false , '$_SESSION[pesel]')";
     ?>
 
     <body>
+      <div class="accessibility">
+        <div class="change-cursor"><img src="img/cursor.png"></div>
+        <div class="change-colors"><img src="img/change.png"></div>
+        <div class="icon"><img src="img/disabled.png"></div>
+      </div>
+
       <header>
         <div class="container-fluid">
           <div class="row">
             <a href=index.php><img id="logo" src="logo@2x.png"></a>
-            <p>Urząd Miejski w Katowicach, Wydział XYZ</p>
+            <p id="main_title">Urząd Miejski w Katowicach, Wydział XYZ</p>
           </div>
         </div>
       </header>

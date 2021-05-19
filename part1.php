@@ -19,6 +19,11 @@
 
     </head>
     <body>
+    <div class="accessibility">
+        <div class="change-cursor"><img src="img/cursor.png"></div>
+        <div class="change-colors"><img src="img/change.png"></div>
+        <div class="icon"><img src="img/disabled.png"></div>
+      </div>
     <!-- Zaznaczanie pól formularza  -->
     <script>
 
@@ -81,35 +86,33 @@
           <div class="container-fluid">
             <div class="row">
               <a href=index.php><img id="logo" src="logo@2x.png"></a>
-              <p>Urząd Miejski w Katowicach, Wydział XYZ</p>
+              <p id="main_title">Urząd Miejski w Katowicach, Wydział XYZ</p>
             </div>
           </div>
         </header>
-
-
 
 
         <div class="sekcja_glowna">
 
           <center>
             <div class="sekcja1_all">
-              <div class="container">
+              <div class="container" id="mobile-centered">
                 <div class="row">
                   <div class="col-md-3">
                     <div class="actual_round">1</div>
-                    <p>Dział</p>
+                    <p class="p_actual">Dział</p>
                   </div>
                   <div class="col-md-3">
                     <div class="round">2</div>
-                    <p>Termin</p>
+                    <p class="p_another">Termin</p>
                   </div>
                   <div class="col-md-3">
                     <div class="round">3</div>
-                    <p>Dane</p>
+                    <p class="p_another">Dane</p>
                   </div>
                   <div class="col-md-3">
                     <div class="round">4</div>
-                    <p>Potwierdzenie</p>
+                    <p class="p_another">Potwierdzenie</p>
                   </div>
                 </div>
               </div>

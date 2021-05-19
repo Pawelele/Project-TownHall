@@ -17,9 +17,11 @@
       <script src="Bootstrap/js/bootstrap.min.js"></script>
       <!-- End Importing bootstrap -->
 
+      <script src="js/accessibility.js" defer></script>
     </head>
     <!-- Przypisanie zmiennej z poprzedniego etapu -->
     <?php
+      error_reporting(0);
 
       $servername = "localhost";
       $username = "site_agent";
@@ -29,19 +31,25 @@
       $conn = mysqli_connect($servername, $username, $password, "SIZ_Database");
 
       // Check connection
-      if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-      }
+      // if (!$conn) {
+      //   die("Connection failed: " . mysqli_connect_error());
+      // }
       //echo "Connected successfully";
 
     ?>
 
     <body>
+      <div class="accessibility">
+        <div class="change-cursor"><img src="img/cursor.png"></div>
+        <div class="change-colors"><img src="img/change.png"></div>
+        <div class="icon"><img src="img/disabled.png"></div>
+      </div>
+
       <header>
         <div class="container-fluid">
           <div class="row">
-            <a href=index.php><img id="logo" src="logo@2x.png"></a>
-            <p>Urząd Miejski w Katowicach, Wydział XYZ</p>
+            <a href=index.php id="logo"><img id="logo" src="logo@2x.png"></a>
+            <p id="main_title">Urząd Miejski w Katowicach, Wydział XYZ</p>
           </div>
         </div>
       </header>
@@ -80,6 +88,7 @@
             </div>
 
             <?php
+              error_reporting(0);
               $conn->close();
             ?>
           </div>

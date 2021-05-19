@@ -6,7 +6,7 @@ body
 }
 .all_body
 {
-   height: 1080px;
+   /* height: 1080px; */
 }
 .all_body_part4
 {
@@ -34,7 +34,6 @@ header img
    width: 125px;
    height: 125px;
    float: left;
-
 }
 header h1
 {
@@ -71,7 +70,6 @@ header h1
    margin-top: 175px;
    font-size: 25px;
 }
-
 .sekcja1_all p
 {
    font-size: 25px;
@@ -79,10 +77,9 @@ header h1
    color: white;
    margin-top: 13px;
 }
-
 .sekcja_glowna
 {
-   height: 823px;
+   /* height: 823px; */
 }
 #wybierz_opcje
 {
@@ -119,7 +116,6 @@ header h1
 {
    margin-bottom: 12px !important;
 }
-
 .option:hover
 {
    background-color: #5AB7FF !important;
@@ -129,7 +125,6 @@ header h1
 {
    background-color: white !important;
 }
-
 .sekcja_regulamin
 {
    background-color: white;
@@ -154,7 +149,6 @@ header h1
    font-weight: 300;
    padding: 20px;
    text-align: left;
-
 }
 hr
 {
@@ -199,21 +193,11 @@ hr
 }
 
 
-
-
-
-
-
-
-
-
-
 /* Widoczność zaznaczenia radio */
 #option1, #option2, #option3, #option4
 {
    opacity: 0;
 }
-
 .flex-parent
 {
    display: flex;
@@ -353,3 +337,155 @@ td
    margin-top: 30px;
    text-align: center;
 }
+
+/* niepelnosprawni */
+
+.icon
+{
+   position:fixed;
+   right: 20px;
+   bottom: 20px;
+   width:80px;
+   height: 80px;
+   border: none;
+   background-color: white;
+   border-radius: 50px;
+   box-shadow: 5px 10px 8px #00000029;
+}
+.change-cursor
+{
+   display: none;
+   position: fixed;
+   right: 20px;
+   bottom: 120px;
+   width:80px;
+   height: 80px;
+   border: 5px solid #088ef5;
+   background-color: white;
+   border-radius: 50px;
+   box-shadow: 5px 10px 8px #00000029;
+}
+.change-colors
+{
+   display: none;
+   position: fixed;
+   right: 20px;
+   bottom: 220px;
+   width:80px;
+   height: 80px;
+   border: 5px solid #088ef5;
+   background-color: white;
+   border-radius: 50px;
+   box-shadow: 5px 10px 8px #00000029;
+}
+.accessibility img
+{
+   width: 45px;
+   height: 45px;
+   text-align: center;
+   display: block;
+   margin: 0 auto;
+   margin-top: 10px;
+}
+
+
+/* Media for mobile */
+@media (max-width: 993px)
+{
+   #mobile-centered
+   {
+      display: flex;
+      justify-content: center;
+   }
+   .actual_round
+   {
+      margin-top: 60px;
+      float:left;
+   }
+   .round
+   {
+      display: none;
+   }
+   .p_another
+   {
+      display: none;
+   }
+   .p_actual
+   {
+      float: left;
+      margin: 0 auto;
+      margin-left: 20px;
+      margin-right: 0;
+      margin-top: 80px !important;
+   }
+   .sekcja1_all
+   {
+      height: 150px;
+   }
+   .sekcja1_all p
+   {
+      font-size: 25px;
+      font-weight: 300;
+      color: white;
+      margin-top: 0px;
+   }
+   #wybierz_opcje
+   {
+      margin-top: 20px;
+   }
+}
+
+@media (max-width: 817px)
+{
+   #logo
+   {
+      width: 88px;
+      height: 88px;
+      margin-top: 0px;
+      float:unset;
+   }
+   header
+   {
+      background-color: white;
+      height: 119px;
+      line-height: unset;
+      text-align: center;
+      width: 100%;
+   }
+   #main_title
+   {
+      text-align: center;
+      font-size: 17px;
+      font-weight: 700;
+      color: #514F54;
+   }
+   .sign_up
+   {
+      width: 300px;
+   }
+   .option
+   {
+      width: 812px;
+      height: 60px;
+      line-height: unset;
+      font-size: 21px;
+      padding-left: 12px;
+      padding-right: 12px;
+   }
+
+}
+
+@media (max-width: 570px)
+{
+   #submit_part4
+   {
+      width: 336px;
+   }
+   .sekcja_regulamin
+   {
+      background-color: white;
+      height: 1110px;
+      text-align: center;
+   }
+}
+
