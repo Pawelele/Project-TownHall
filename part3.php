@@ -17,6 +17,7 @@
       <script src="Bootstrap/js/bootstrap.min.js"></script>
       <!-- End Importing bootstrap -->
 
+      <script src="js/accessibility.js" defer></script>
     </head>
     <!-- Przypisanie zmiennej z poprzedniego etapu -->
     <?php
@@ -46,8 +47,8 @@
         <div class="sekcja_glowna">
 
         <center>
-          <div class="sekcja1_all">
-            <div class="container" id="mobile-centered">
+          <div class="sekcja1_all" id="mobile-centered">
+            <div class="container">
               <div class="row">
                 <div class="col-md-3">
                   <div class="round">1</div>

@@ -17,6 +17,7 @@
       <script src="Bootstrap/js/bootstrap.min.js"></script>
       <!-- End Importing bootstrap -->
 
+      <script src="js/accessibility.js" defer></script>
     </head>
     <!-- Przypisanie zmiennej z poprzedniego etapu -->
     <?php
@@ -100,6 +101,22 @@
                     $_SESSION['data_wybrana'] = $row['termin'];
                   }
                   echo $_SESSION['data_wybrana'];
+                ?>
+                <!-- Sending mail after rejestration -->
+                <?php
+                  $email_odbiorcy = $_SESSION["email"];
+                  $header = "Reply-To: <none@none.pl> \r\n";
+                  $header .= "MIME-Version: 1.0 \r\n";
+                  $header .= "Content-Type: text/html; charset=UTF-8";
+                  $wiadomosc = "<p>Cześć: ".$_SESSION['name']."!</p>";
+                  $wiadomosc .= "<p>Twoja wizyta została umówiona!</p>";
+                  $wiadomosc .= "<p>Nadany numerek: ".$_SESSION['ticket']."</p>";
+                  $wiadomosc .= "<p>Termin: ".$_SESSION['data_wybrana']."</p>";
+                  $message = "<!doctype html><html><head><meta charset='UTF-8'>".$wiadomosc."</head></html>";
+                  $subject = 'Twoja wizyta została umówiona';
+                  $subject ='=?utf-8?B?'.base64_encode($subject).'?=';
+
+                  mail($email_odbiorcy, $subject, $message, $header)
                 ?>
             </div>
 

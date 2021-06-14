@@ -17,8 +17,10 @@
       <script src="Bootstrap/js/bootstrap.min.js"></script>
       <!-- End Importing bootstrap -->
 
+      <script src="js/accessibility.js" async></script>
     </head>
     <body>
+    <div class="bigCursor">
     <div class="accessibility">
         <div class="change-cursor"><img src="img/cursor.png"></div>
         <div class="change-colors"><img src="img/change.png"></div>
@@ -95,8 +97,8 @@
         <div class="sekcja_glowna">
 
           <center>
-            <div class="sekcja1_all">
-              <div class="container" id="mobile-centered">
+            <div class="sekcja1_all"  id="mobile-centered">
+              <div class="container">
                 <div class="row">
                   <div class="col-md-3">
                     <div class="actual_round">1</div>
@@ -156,6 +158,7 @@
 
         </div>
 
+      </div>
       </div>
     </body>
 </html>

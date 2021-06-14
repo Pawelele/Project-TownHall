@@ -39,6 +39,7 @@
     ?>
 
     <body>
+      <div class="bigCursor">
       <div class="accessibility">
         <div class="change-cursor"><img src="img/cursor.png"></div>
         <div class="change-colors"><img src="img/change.png"></div>
@@ -48,7 +49,7 @@
       <header>
         <div class="container-fluid">
           <div class="row">
-            <a href=index.php id="logo"><img id="logo" src="logo@2x.png"></a>
+            <a href=index.php id="logo"><img id="logo" class="logo2" src="logo@2x.png"></a>
             <p id="main_title">Urząd Miejski w Katowicach, Wydział XYZ</p>
           </div>
         </div>
@@ -79,10 +80,10 @@
                 error_reporting(0);
                 $q = "SELECT imie, nazwisko, termin, id FROM zapisy WHERE pesel = $_GET[pesel_check_input]";
 
-                $result = mysqli_query($conn, $q) or die("<center>Wprowadź PESEL w polu powyzej</center>");
+                $result = mysqli_query($conn, $q) or die("<center class='yellow'>Wprowadź PESEL w polu powyzej</center>");
                 while($row = mysqli_fetch_assoc($result))
                 {
-                  echo("<center> Imie: ".$row['imie']." &nbsp;&nbsp;&nbsp;Nazwisko: ".$row['nazwisko']." &nbsp;&nbsp;&nbsp;Data: ".$row['termin']." &nbsp;&nbsp;&nbsp;Numerek: ".$row['id']."</center>");
+                  echo("<center class='yellow'> Imie: ".$row['imie']." &nbsp;&nbsp;&nbsp;Nazwisko: ".$row['nazwisko']." &nbsp;&nbsp;&nbsp;Data: ".$row['termin']." &nbsp;&nbsp;&nbsp;Numerek: ".$row['id']."</center>");
                 }
               ?>
             </div>
@@ -100,6 +101,6 @@
 
       </div>
 
-
+      </div>
     </body>
 </html>

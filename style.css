@@ -4,6 +4,12 @@ body
    background-image: url(background@2x.png);
    margin: 0 auto !important;
 }
+.bigCursor
+{
+   cursor:default;
+   height: 100vh;
+   z-index: 100;
+}
 .all_body
 {
    /* height: 1080px; */
@@ -34,6 +40,16 @@ header img
    width: 125px;
    height: 125px;
    float: left;
+}
+/* This class is added to logo in js, when switching colors by accesibility options */
+.yellowLogo
+{
+   width: 80px !important;
+   height: 80px !important;
+   line-height: 80px;
+   float: left;
+   margin-right: 20px;
+   margin-top: 18px;
 }
 header h1
 {
@@ -105,6 +121,22 @@ header h1
    border-radius: 30px;
    background-color: white;
    color: #514F54;
+   margin-bottom: 12px;
+   text-align: center;
+   font-size: 25px;
+   font-weight: 400;
+   border: none;
+   transition: 0.25s;
+}
+/* When clicking the option for disabled people change class name, because on option was blue hover, and now its gone */
+.optionDisable
+{
+   width: 812px;
+   height: 60px;
+   line-height: 60px;
+   border-radius: 30px;
+   background-color: black;
+   color: #FFCB05;
    margin-bottom: 12px;
    text-align: center;
    font-size: 25px;
@@ -220,7 +252,8 @@ hr
    font-weight: 300;
    border: none;
    margin-top: 35px;
-   background-color: white;;
+   background-color: white;
+
 }
 #submit_part4
 {
@@ -343,6 +376,7 @@ td
 .icon
 {
    position:fixed;
+   z-index: 99;
    right: 20px;
    bottom: 20px;
    width:80px;
@@ -351,11 +385,13 @@ td
    background-color: white;
    border-radius: 50px;
    box-shadow: 5px 10px 8px #00000029;
+   transition: 0.25s;
 }
 .change-cursor
 {
    display: none;
    position: fixed;
+   z-index: 99;
    right: 20px;
    bottom: 120px;
    width:80px;
@@ -364,11 +400,13 @@ td
    background-color: white;
    border-radius: 50px;
    box-shadow: 5px 10px 8px #00000029;
+   transition: 0.25s;
 }
 .change-colors
 {
    display: none;
    position: fixed;
+   z-index: 99;
    right: 20px;
    bottom: 220px;
    width:80px;
@@ -377,6 +415,7 @@ td
    background-color: white;
    border-radius: 50px;
    box-shadow: 5px 10px 8px #00000029;
+   transition: 0.25s;
 }
 .accessibility img
 {
@@ -385,7 +424,11 @@ td
    text-align: center;
    display: block;
    margin: 0 auto;
-   margin-top: 10px;
+   margin-top: 12px;
+}
+.icon:hover, .change-colors:hover, .change-cursor:hover
+{
+   transform: scale(1.03);
 }
 
 
@@ -415,7 +458,6 @@ td
       float: left;
       margin: 0 auto;
       margin-left: 20px;
-      margin-right: 0;
       margin-top: 80px !important;
    }
    .sekcja1_all
@@ -441,8 +483,9 @@ td
    {
       width: 88px;
       height: 88px;
-      margin-top: 0px;
+      margin-top: 3px;
       float:unset;
+      margin-right: 0px;
    }
    header
    {
@@ -457,7 +500,6 @@ td
       text-align: center;
       font-size: 17px;
       font-weight: 700;
-      color: #514F54;
    }
    .sign_up
    {
