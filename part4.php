@@ -17,7 +17,7 @@
       <script src="Bootstrap/js/bootstrap.min.js"></script>
       <!-- End Importing bootstrap -->
 
-      <script src="js/accessibility.js" defer></script>
+      <script src="js/accessibility4.js" defer></script>
     </head>
     <!-- Przypisanie zmiennej z poprzedniego etapu -->
     <?php
@@ -29,6 +29,7 @@
     ?>
 
     <body>
+    <div class="bigCursor">
       <div class="accessibility">
         <div class="change-cursor"><img src="img/cursor.png"></div>
         <div class="change-colors"><img src="img/change.png"></div>
@@ -39,7 +40,7 @@
         <header>
           <div class="container-fluid">
             <div class="row">
-              <a href=index.php><img id="logo" src="logo@2x.png"></a>
+              <a href=index.php><img id="logo" class="logo2" src="logo@2x.png"></a>
               <p id="main_title">Urząd Miejski w Katowicach, Wydział XYZ</p>
             </div>
           </div>
@@ -96,7 +97,7 @@
         <div class="sekcja_regulamin">
           <div class="container">
             <div class="row">
-              <p>Regulamin</p>
+              <p id="reg_p">Regulamin</p>
               <div class="flex-parent jc-center">
                 <div class="regulamin">
                   1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Suspendisse ultrices gravida dictum fusce ut placerat orci.<br>
@@ -118,7 +119,7 @@
           </div>
         </div>
 
-
+      </div>
       </div>
     </body>
 </html>

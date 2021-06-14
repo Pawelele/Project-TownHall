@@ -17,7 +17,7 @@
       <script src="Bootstrap/js/bootstrap.min.js"></script>
       <!-- End Importing bootstrap -->
 
-      <script src="js/accessibility.js" defer></script>
+      <script src="js/accessibility3.js" defer></script>
     </head>
     <!-- Przypisanie zmiennej z poprzedniego etapu -->
     <?php
@@ -26,6 +26,7 @@
     ?>
 
     <body>
+    <div class="bigCursor">
       <div class="accessibility">
         <div class="change-cursor"><img src="img/cursor.png"></div>
         <div class="change-colors"><img src="img/change.png"></div>
@@ -36,7 +37,7 @@
         <header>
           <div class="container-fluid">
             <div class="row" id="naglowek">
-              <a href=index.php><img id="logo" src="logo@2x.png"></a>
+              <a href=index.php><img id="logo" class="logo2" src="logo@2x.png"></a>
               <p id="main_title">Urząd Miejski w Katowicach, Wydział XYZ</p>
             </div>
           </div>
@@ -107,7 +108,7 @@
 
 
         </div>
-
+    </div>
       </div>
     </body>
 </html>

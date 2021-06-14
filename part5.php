@@ -41,7 +41,7 @@
     ?>
 
     <body>
-      <div class="accessibility">
+      <div class="accessibility4">
         <div class="change-cursor"><img src="img/cursor.png"></div>
         <div class="change-colors"><img src="img/change.png"></div>
         <div class="icon"><img src="img/disabled.png"></div>
@@ -50,7 +50,7 @@
       <header>
         <div class="container-fluid">
           <div class="row">
-            <a href=index.php><img id="logo" src="logo@2x.png"></a>
+            <a href=index.php><img id="logo" class="logo2" src="logo@2x.png"></a>
             <p id="main_title">Urząd Miejski w Katowicach, Wydział XYZ</p>
           </div>
         </div>
