@@ -24,18 +24,7 @@
       error_reporting(0);
       session_start();
 
-      $servername = "localhost";
-      $username = "site_agent";
-      $password = "Projekt_siz_132";
-
-      // Create connection
-      $conn = mysqli_connect($servername, $username, $password, "SIZ_Database");
-
-      // Check connection
-      // if (!$conn) {
-      //   die("Connection failed: " . mysqli_connect_error());
-      // }
-      // echo "Connected successfully";
+      require_once "connect.php";
 
       $sql="INSERT INTO zapisy (operacja, termin, imie, nazwisko, email, potwierdzenie , pesel) VALUES ('$_SESSION[department]','$_SESSION[picked_date]', '$_SESSION[name]', '$_SESSION[surname]', '$_SESSION[email]', false , '$_SESSION[pesel]')";
     ?>

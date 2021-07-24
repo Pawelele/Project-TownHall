@@ -23,19 +23,7 @@
     <?php
       error_reporting(0);
 
-      $servername = "localhost";
-      $username = "site_agent";
-      $password = "Projekt_siz_132";
-
-      // Create connection
-      $conn = mysqli_connect($servername, $username, $password, "SIZ_Database");
-
-      // Check connection
-      // if (!$conn) {
-      //   die("Connection failed: " . mysqli_connect_error());
-      // }
-      //echo "Connected successfully";
-
+      require_once "connect.php";
     ?>
 
     <body>
@@ -95,9 +83,6 @@
           </div>
         </div>
       </div>
-         <!-- <hr>
-         <p id="footer">Lorem ipsum, Lorem ipsum, Lorem ipsum</p> -->
-
 
       </div>
 
