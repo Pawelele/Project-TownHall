@@ -1,7 +1,7 @@
 body
 {
    font-family: 'Lato', sans-serif !important;
-   background-image: url(background@2x.png);
+   background-image: url(img/background@2x.png);
    margin: 0 auto !important;
 }
 .bigCursor
