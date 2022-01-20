@@ -1,27 +1,12 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
 body
 {
-   font-family: 'Lato', sans-serif !important;
+   font-family: 'Lato', sans-serif;
    background-image: url(img/background@2x.png);
-   margin: 0 auto !important;
-}
-.bigCursor
-{
-   cursor:default;
-   height: 100vh;
-   z-index: 100;
-}
-.all_body
-{
-   /* height: 1080px; */
-}
-.all_body_part4
-{
-   height: 2016px;
-}
-.row
-{
-   margin-left: 0px !important;
-   margin-right: 0px !important;
 }
 header
 {
@@ -33,23 +18,13 @@ header
 }
 header img
 {
-   margin-right: 15px;
+   margin-right: 20px;
 }
 #logo
 {
    width: 125px;
    height: 125px;
    float: left;
-}
-/* This class is added to logo in js, when switching colors by accesibility options */
-.yellowLogo
-{
-   width: 80px !important;
-   height: 80px !important;
-   line-height: 80px;
-   float: left;
-   margin-right: 20px;
-   margin-top: 18px;
 }
 header h1
 {
@@ -58,9 +33,18 @@ header h1
    font-size: 35px;
    color: #514F54;
 }
+.sekcja_glowna
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
 .sekcja1_all
 {
-   height: 200px;
+   display: flex;
+   width: 800px;
+   justify-content: space-evenly;
 }
 .round
 {
@@ -93,10 +77,6 @@ header h1
    color: white;
    margin-top: 13px;
 }
-.sekcja_glowna
-{
-   /* height: 823px; */
-}
 #wybierz_opcje
 {
    font-size: 25px;
@@ -113,6 +93,14 @@ header h1
    margin-top: 188px;
    margin-bottom: 30px;
 }
+.form
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
 .option
 {
    width: 812px;
@@ -127,41 +115,47 @@ header h1
    font-weight: 400;
    border: none;
    transition: 0.25s;
+   cursor: pointer;
 }
-/* When clicking the option for disabled people change class name, because on option was blue hover, and now its gone */
-.optionDisable
-{
+
+.option-active{
    width: 812px;
    height: 60px;
    line-height: 60px;
    border-radius: 30px;
-   background-color: black;
-   color: #FFCB05;
+   color: #514F54;
    margin-bottom: 12px;
    text-align: center;
    font-size: 25px;
    font-weight: 400;
    border: none;
    transition: 0.25s;
+   cursor: pointer;
+   background-color: #5AB7FF;
+   transform: scale(1.05);
 }
+
 #part4_option
 {
-   margin-bottom: 12px !important;
+   margin-bottom: 12px;
 }
 .option:hover
 {
-   background-color: #5AB7FF !important;
    transform: scale(1.01);
 }
 #no_color_change:hover
 {
-   background-color: white !important;
+   background-color: white;
 }
 .sekcja_regulamin
 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
    background-color: white;
-   height: 1068px;
    text-align: center;
+   width: 100%;
 }
 .sekcja_regulamin p
 {
@@ -171,7 +165,7 @@ header h1
 }
 .regulamin
 {
-   width: 1088px;
+   width: 900px;
    height: 636px;
    color: white;
    background-color: #2886E0;
@@ -185,14 +179,15 @@ header h1
 hr
 {
    width: 80%;
-   margin-top: 120px !important;
-   margin-bottom: 0px !important;
+   margin-top: 120px;
+   margin-bottom: 0px;
 }
 #footer
 {
    text-align: center;
    color:white;
    font-size: 25px;
+   margin-bottom: 20px;
 }
 #footer_part4
 {
@@ -200,6 +195,7 @@ hr
    color: #5AB7FF;
    font-size: 25px;
    margin-top: 10px;
+   margin-bottom: 20px;
 }
 #blue_hr
 {
@@ -229,14 +225,6 @@ hr
 #option1, #option2, #option3, #option4
 {
    opacity: 0;
-}
-.flex-parent
-{
-   display: flex;
-}
-.jc-center
-{
-   justify-content: center;
 }
 #font25
 {
@@ -295,6 +283,7 @@ hr
    font-size: 25px;
    color: white;
    margin-top: 50px;
+   margin-bottom: 20px;
 }
 #pesel_check
 {
@@ -319,11 +308,12 @@ hr
    font-size: 30px;
    font-weight: 500;
    border: none;
+   text-decoration: none;
 }
 td
 {
    border: 1px solid white;
-   padding: 5px !important;
+   padding: 5px;
 }
 .panel_login
 {
@@ -370,164 +360,3 @@ td
    margin-top: 30px;
    text-align: center;
 }
-
-/* niepelnosprawni */
-
-.icon
-{
-   position:fixed;
-   z-index: 99;
-   right: 20px;
-   bottom: 20px;
-   width:80px;
-   height: 80px;
-   border: none;
-   background-color: white;
-   border-radius: 50px;
-   box-shadow: 5px 10px 8px #00000029;
-   transition: 0.25s;
-}
-.change-cursor
-{
-   display: none;
-   position: fixed;
-   z-index: 99;
-   right: 20px;
-   bottom: 120px;
-   width:80px;
-   height: 80px;
-   border: 5px solid #088ef5;
-   background-color: white;
-   border-radius: 50px;
-   box-shadow: 5px 10px 8px #00000029;
-   transition: 0.25s;
-}
-.change-colors
-{
-   display: none;
-   position: fixed;
-   z-index: 99;
-   right: 20px;
-   bottom: 220px;
-   width:80px;
-   height: 80px;
-   border: 5px solid #088ef5;
-   background-color: white;
-   border-radius: 50px;
-   box-shadow: 5px 10px 8px #00000029;
-   transition: 0.25s;
-}
-.accessibility img
-{
-   width: 45px;
-   height: 45px;
-   text-align: center;
-   display: block;
-   margin: 0 auto;
-   margin-top: 12px;
-}
-.icon:hover, .change-colors:hover, .change-cursor:hover
-{
-   transform: scale(1.03);
-}
-
-
-/* Media for mobile */
-@media (max-width: 993px)
-{
-   #mobile-centered
-   {
-      display: flex;
-      justify-content: center;
-   }
-   .actual_round
-   {
-      margin-top: 60px;
-      float:left;
-   }
-   .round
-   {
-      display: none;
-   }
-   .p_another
-   {
-      display: none;
-   }
-   .p_actual
-   {
-      float: left;
-      margin: 0 auto;
-      margin-left: 20px;
-      margin-top: 80px !important;
-   }
-   .sekcja1_all
-   {
-      height: 150px;
-   }
-   .sekcja1_all p
-   {
-      font-size: 25px;
-      font-weight: 300;
-      color: white;
-      margin-top: 0px;
-   }
-   #wybierz_opcje
-   {
-      margin-top: 20px;
-   }
-}
-
-@media (max-width: 817px)
-{
-   #logo
-   {
-      width: 88px;
-      height: 88px;
-      margin-top: 3px;
-      float:unset;
-      margin-right: 0px;
-   }
-   header
-   {
-      background-color: white;
-      height: 119px;
-      line-height: unset;
-      text-align: center;
-      width: 100%;
-   }
-   #main_title
-   {
-      text-align: center;
-      font-size: 17px;
-      font-weight: 700;
-   }
-   .sign_up
-   {
-      width: 300px;
-   }
-   .option
-   {
-      width: 812px;
-      height: 60px;
-      line-height: unset;
-      font-size: 21px;
-      padding-left: 12px;
-      padding-right: 12px;
-   }
-
-}
-
-@media (max-width: 570px)
-{
-   #submit_part4
-   {
-      width: 336px;
-   }
-   .sekcja_regulamin
-   {
-      background-color: white;
-      height: 1110px;
-      text-align: center;
-   }
-}
-
